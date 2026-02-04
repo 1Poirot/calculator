@@ -1,7 +1,8 @@
+
 import java.util.Scanner;
 
 public class Calculator {
-
+    
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -10,25 +11,25 @@ public class Calculator {
         System.out.println("[0] [1] [2] [3] [4]");
         System.out.println("[5] [6] [7] [8] [9]");
         System.out.println();
-        System.out.println("Operators: *  /  %");
+        System.out.println("Operators: * / %");
         System.out.println("==========================");
 
-        System.out.print("Enter first number: ");
+        System.out.println("Enter first number: ");
         double num1 = sc.nextDouble();
 
-        System.out.print("Enter operator (* / %): ");
+        System.out.println("Enter operator (* / %): ");
         char op = sc.next().charAt(0);
 
-        System.out.print("Enter second number: ");
+        System.out.println("Enter second number: ");
         double num2 = sc.nextDouble();
 
         double result = 0;
 
         if (op == '*') {
             result = num1 * num2;
-        } else if (op == '/') {
+        } else if (op == '/'){
             result = num1 / num2;
-        } else if (op == '%') {
+        } else if (op == '%'){
             result = num1 % num2;
         } else {
             System.out.println("Invalid operator");
