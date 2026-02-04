@@ -1,17 +1,19 @@
+
 import java.util.Scanner;
 
 public class Calculator {
-
+    
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
+        
         System.out.println("==== CALCULATOR ====");
         System.out.println("[0] [1] [2] [3] [4]");
         System.out.println("[5] [6] [7] [8] [9]");
         System.out.println();
-        System.out.println("Operators: *  /  %");
+        System.out.println("====================");       
         System.out.println("Operators: +  -");
+        System.out.println("Operators: *  /  %");
         System.out.println("Press = to calculate");
         System.out.println("====================");
 
@@ -28,9 +30,9 @@ public class Calculator {
 
         if (op == '*') {
             result = num1 * num2;
-        } else if (op == '/') {
+        } else if (op == '/'){
             result = num1 / num2;
-        } else if (op == '%') {
+        } else if (op == '%'){
             result = num1 % num2;
         } else if (op == '+') {
             result = num1 + num2;
@@ -42,10 +44,10 @@ public class Calculator {
             return;
         }
 
-        System.out.println("Process:");
+        System.out.print("Process:");
         System.out.println(num1 + " " + op + " " + num2);
         
-        System.out.println("Result : ");
+        System.out.print("Result : ");
         System.out.println(result);
 
         sc.close();
