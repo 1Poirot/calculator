@@ -5,11 +5,12 @@ public class Calculator {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
+        
         System.out.println("==== CALCULATOR ====");
         System.out.println("[0] [1] [2] [3] [4]");
         System.out.println("[5] [6] [7] [8] [9]");
         System.out.println();
+        System.out.println("====================");
         System.out.println("Operators: *  /  %");
         System.out.println("Operators: +  -");
         System.out.println("Press = to calculate");
