@@ -11,19 +11,19 @@ public class Calculator {
         System.out.println("[0] [1] [2] [3] [4]");
         System.out.println("[5] [6] [7] [8] [9]");
         System.out.println();
-        System.out.println("====================");
-        System.out.println("Operators: *  /  %");
+        System.out.println("====================");       
         System.out.println("Operators: +  -");
+        System.out.println("Operators: *  /  %");
         System.out.println("Press = to calculate");
         System.out.println("====================");
 
-        System.out.println("Enter first number: ");
+        System.out.print("Enter first number: ");
         double num1 = sc.nextDouble();
 
         System.out.print("Enter operator (+ or - or * or / or % ): ");
         char op = sc.next().charAt(0);
 
-        System.out.println("Enter second number: ");
+        System.out.print("Enter second number: ");
         double num2 = sc.nextDouble();
 
         double result = 0;
@@ -44,10 +44,10 @@ public class Calculator {
             return;
         }
 
-        System.out.println("Process:");
+        System.out.print("Process:");
         System.out.println(num1 + " " + op + " " + num2);
         
-        System.out.println("Result : ");
+        System.out.print("Result : ");
         System.out.println(result);
 
         sc.close();
