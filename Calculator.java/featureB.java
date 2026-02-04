@@ -11,7 +11,6 @@ public class featureB {
         System.out.println("[5] [6] [7] [8] [9]");
         System.out.println();
         System.out.println("Operators: *  /  %");
-        System.out.println("Press = to calculate");
         System.out.println("==========================");
 
         System.out.print("Enter first number: ");
@@ -22,9 +21,6 @@ public class featureB {
 
         System.out.print("Enter second number: ");
         double num2 = sc.nextDouble();
-
-        System.out.print("Press = : ");
-        sc.next();   
 
         double result = 0;
 
