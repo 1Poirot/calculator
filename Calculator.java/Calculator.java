@@ -11,7 +11,6 @@ public class Calculator {
         System.out.println("[5] [6] [7] [8] [9]");
         System.out.println();
         System.out.println("Operators: *  /  %");
-        System.out.println("==========================");
         System.out.println("Operators: +  -");
         System.out.println("Press = to calculate");
         System.out.println("====================");
@@ -19,8 +18,7 @@ public class Calculator {
         System.out.print("Enter first number: ");
         double num1 = sc.nextDouble();
 
-        System.out.print("Enter operator (* / %): ");
-        System.out.print("Enter operator (+ or -): ");
+        System.out.print("Enter operator (+ or - or * or / or % ): ");
         char op = sc.next().charAt(0);
 
         System.out.print("Enter second number: ");
@@ -34,9 +32,7 @@ public class Calculator {
             result = num1 / num2;
         } else if (op == '%') {
             result = num1 % num2;
-        } else {
-            System.out.println("Invalid operator");
-        if (op == '+') {
+        } else if (op == '+') {
             result = num1 + num2;
         } else if (op == '-') {
             result = num1 - num2;
@@ -46,20 +42,12 @@ public class Calculator {
             return;
         }
 
-        System.out.println();
-        System.out.println("Process : ");
-        System.out.println(num1 + " " + op + " " + num2);
-
-        System.out.println("Result : ");
-        System.out.println(result);
         System.out.println("Process:");
         System.out.println(num1 + " " + op + " " + num2);
-
-        System.out.println("Result:");
+        
+        System.out.println("Result : ");
         System.out.println(result);
 
         sc.close();
     }
-}
-
 }
