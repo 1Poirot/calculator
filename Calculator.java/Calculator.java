@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class featureB {
+public class Calculator {
 
     public static void main(String[] args) {
 
