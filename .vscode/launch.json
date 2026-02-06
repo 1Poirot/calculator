@@ -5,6 +5,13 @@
             "name": "Calculator",
             "request": "launch",
             "mainClass": "Calculator",
+            "projectName": "calculator_fd8a7db7"
+        },
+        {
+            "type": "java",
+            "name": "Calculator",
+            "request": "launch",
+            "mainClass": "Calculator",
             "projectName": "calculator_97004df8"
         },
         {
