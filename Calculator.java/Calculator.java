@@ -1,50 +1,45 @@
 import java.util.Scanner;
+
 public class Calculator {
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
-                Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-                System.out.println("===CALCULATOR===");
-                System.out.println("[0] [1] [2] [3] [4]");
-                System.out.println("[5] [6] [7] [8] [9]");
-                System.out.println();
-                System.out.println("Operations: + -");
-                System.out.println("Press = to calculate");
-                System.out.println("====================");
+        System.out.println("==== CALCULATOR ====");
+        System.out.println("[0] [1] [2] [3] [4]");
+        System.out.println("[5] [6] [7] [8] [9]");
+        System.out.println();
+        System.out.println("Operators: + -");
+        System.out.println("Enter '=' to get result");
+        System.out.println("===================");
 
-                System.out.println("Enter first number: ");
-                double num1 = sc.nextDouble();
+        System.out.print("Enter first number: ");
+        double result = sc.nextDouble(); 
 
-                System.out.println("Enter operator (+ or -):");
-                double op = sc.next().charAt(0);
-                
-                System.out.println("Enter second number:");
-                double num2 = sc.nextDouble();
+     while (true) {
+        while (true) {
+            System.out.print("Enter operator (+ - or =): ");
+            String op = sc.next();
 
-                double result = 0;
-                
-                if (op == '+') {
-                        result = num1 + num2;
-                } else if (op == '-') {
-                        result = num1 - num2;
-                } else {
-                        System.out.println("Invalid operator!");
-                        sc.close();
-                        return;
-                }
-
-                System.out.println();
-                System.out.println("Process");
-                System.out.println(num1 + " " + op + "" + num2);
-
-                System.out.println("Result:");
-                System.out.println(result);
-
+            if (op.equals("=")) {
+                System.out.println("Result: " + result);
                 sc.close();
+                return;
+            }
 
+            System.out.print("Enter next number: ");
+            double num = sc.nextDouble();
 
-
-
+            if (op.equals("+")) {
+                result += num;
+            } else if (op.equals("-")) {
+                result -= num;
+            } else {
+                System.out.println("Invalid operator. Please use +, -, or =.");
+            }
         }
+     }
+
+    }
 }
