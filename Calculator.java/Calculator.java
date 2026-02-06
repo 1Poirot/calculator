@@ -12,35 +12,41 @@ public class Calculator {
         System.out.println("[5] [6] [7] [8] [9]");
         System.out.println();
         System.out.println("Operators: * / %");
+        System.out.println("Enter '=' to get result");
         System.out.println("==========================");
 
-        System.out.println("Enter first number: ");
-        double num1 = sc.nextDouble();
+        System.out.print("Enter first number: ");
+        double result = sc.nextDouble(); 
 
-        System.out.println("Enter operator (* / %): ");
-        char op = sc.next().charAt(0);
+        while (true) {
+            System.out.print("Enter operator (* / % or =): ");
+            char op = sc.next().charAt(0);
 
-        System.out.println("Enter second number: ");
-        double num2 = sc.nextDouble();
+            if (op == '=') {
+                break; 
+            }
 
-        double result = 0;
+            System.out.print("Enter next number: ");
+            double num = sc.nextDouble();
 
-        if (op == '*') {
-            result = num1 * num2;
-        } else if (op == '/'){
-            result = num1 / num2;
-        } else if (op == '%'){
-            result = num1 % num2;
-        } else {
-            System.out.println("Invalid operator");
-            return;
+            if (op == '*') {
+                result= num;
+            } else if (op == '/') {
+                if (num == 0) {
+                    System.out.println("Error: divide by zero!");
+                    continue;
+                }
+                result /= num;
+            } else if (op == '%') {
+                result %= num;
+            } else {
+                System.out.println("Invalid operator");
+            }
         }
 
-        System.out.println();
-        System.out.println("Process : ");
-        System.out.println(num1 + " " + op + " " + num2);
+        System.out.println("===================");
+        System.out.println("Final Result: " + result);
 
-        System.out.println("Result : ");
-        System.out.println(result);
+        sc.close();
     }
 }
