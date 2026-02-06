@@ -15,19 +15,21 @@ public class Calculator {
         System.out.println("Operators: + -");
         System.out.println("Enter '=' to get result");
         System.out.println("===================");
+        System.out.println("Operators: * / %");
+        System.out.println("Enter '=' to get result");
+        System.out.println("==========================");
 
         System.out.print("Enter first number: ");
         double result = sc.nextDouble(); 
 
      while (true) {
-        while (true) {
-            System.out.print("Enter operator (+ - or =): ");
+            System.out.print("Enter operator (+ -  * / % or =): ");
             String op = sc.next();
 
             if (op.equals("=")) {
                 System.out.println("Result: " + result);
-                sc.close();
-                return;
+                break;
+                 
             }
 
             System.out.print("Enter next number: ");
@@ -37,11 +39,25 @@ public class Calculator {
                 result += num;
             } else if (op.equals("-")) {
                 result -= num;
+            } else if (op.equals("*")) {
+                result *= num;
+            } else if (op.equals("/")) {
+
+                if (num == 0) {
+                    System.out.print("Error: divide by zero!");
+                }
+                result /= num;
+            } else if (op.equals("%")) {
+                result %= num;
             } else {
-                System.out.println("Invalid operator. Please use +, -, or =.");
+                 System.out.print("Invalid operator. Please use +, -, *, /, or %.");
             }
         }
-     }
+     
 
+        System.out.println("===================");
+        System.out.println("Final Result: " + result);
+
+        sc.close();
     }
 }
