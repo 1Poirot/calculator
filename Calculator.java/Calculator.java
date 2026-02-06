@@ -6,49 +6,57 @@ public class Calculator {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        
+       
+
         System.out.println("==== CALCULATOR ====");
         System.out.println("[0] [1] [2] [3] [4]");
         System.out.println("[5] [6] [7] [8] [9]");
         System.out.println();
-        System.out.println("====================");       
-        System.out.println("Operators: +  -");
-        System.out.println("Operators: *  /  %");
-        System.out.println("Press = to calculate");
-        System.out.println("====================");
+        System.out.println("Operators: + -");
+        System.out.println("Enter '=' to get result");
+        System.out.println("===================");
+        System.out.println("Operators: * / %");
+        System.out.println("Enter '=' to get result");
+        System.out.println("==========================");
 
         System.out.print("Enter first number: ");
-        double num1 = sc.nextDouble();
+        double result = sc.nextDouble(); 
 
-        System.out.print("Enter operator (+ or - or * or / or % ): ");
-        char op = sc.next().charAt(0);
+     while (true) {
+            System.out.print("Enter operator (+ -  * / % or =): ");
+            String op = sc.next();
 
-        System.out.print("Enter second number: ");
-        double num2 = sc.nextDouble();
+            if (op.equals("=")) {
+                System.out.println("Result: " + result);
+                break;
+                 
+            }
 
-        double result = 0;
+            System.out.print("Enter next number: ");
+            double num = sc.nextDouble();
 
-        if (op == '*') {
-            result = num1 * num2;
-        } else if (op == '/'){
-            result = num1 / num2;
-        } else if (op == '%'){
-            result = num1 % num2;
-        } else if (op == '+') {
-            result = num1 + num2;
-        } else if (op == '-') {
-            result = num1 - num2;
-        } else {
-            System.out.println("Invalid operator");
-            sc.close();
-            return;
+            if (op.equals("+")) {
+                result += num;
+            } else if (op.equals("-")) {
+                result -= num;
+            } else if (op.equals("*")) {
+                result *= num;
+            } else if (op.equals("/")) {
+
+                if (num == 0) {
+                    System.out.print("Error: divide by zero!");
+                }
+                result /= num;
+            } else if (op.equals("%")) {
+                result %= num;
+            } else {
+                 System.out.print("Invalid operator. Please use +, -, *, /, or %.");
+            }
         }
+     
 
-        System.out.print("Process:");
-        System.out.println(num1 + " " + op + " " + num2);
-        
-        System.out.print("Result : ");
-        System.out.println(result);
+        System.out.println("===================");
+        System.out.println("Final Result: " + result);
 
         sc.close();
     }
